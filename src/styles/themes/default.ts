@@ -5,7 +5,7 @@ export const defaultTheme = {
   title: '#FAFAFA',
   subtitle: '#f3f2f2',
   text: '#EDEDED',
-  label: "D7D5D5",
+  label: "#D7D5D5",
 
   card: '#403937',
   input: '#574F4D',
