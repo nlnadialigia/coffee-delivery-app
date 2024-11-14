@@ -1,6 +1,7 @@
 import {Coffee, Package, ShoppingCart, Timer} from "phosphor-react";
 import HeaderImage from "../../assets/imagem.png";
-import {HeaderInfo, HomeContainer, HomeHeader, Icon} from "./styles";
+import {Cards} from "../../components/Cards";
+import {HeaderContainer, HeaderInfo, HomeContainer, HomeHeader, HomeMain, Icon} from "./styles";
 
 const headerInfos = [
   {
@@ -28,21 +29,28 @@ const headerInfos = [
 export function Home() {
   return (
     <HomeContainer>
-      <HomeHeader>
-        <h1>Encontre o café perfeito para qualquer hora do dia</h1>
-        <p>Com o Coffee Delivery voce recebe seu cafe onde estiver, a qualquer hora</p>
+      <HeaderContainer>
+        <HomeHeader>
+          <h1>Encontre o café perfeito para qualquer hora do dia</h1>
+          <p>Com o Coffee Delivery voce recebe seu cafe onde estiver, a qualquer hora</p>
 
-        <HeaderInfo>
-          {headerInfos.map((info) => (
-            <div key={info.text}>
-              <Icon iconBackground={info.bg}>{info.icon}</Icon>
-              <span>{info.text}</span>
-            </div>
-          ))}
-        </HeaderInfo>
-      </HomeHeader>
-      
-      <img src={HeaderImage} alt="" />
+          <HeaderInfo>
+            {headerInfos.map((info) => (
+              <div key={info.text}>
+                <Icon iconBackground={info.bg}>{info.icon}</Icon>
+                <span>{info.text}</span>
+              </div>
+            ))}
+          </HeaderInfo>
+        </HomeHeader>
+        
+        <img src={HeaderImage} alt="" />
+      </HeaderContainer>
+
+      <HomeMain>
+        <h2>Nossos Cafés</h2>
+        <Cards />
+      </HomeMain>
     </HomeContainer>
   );
 }

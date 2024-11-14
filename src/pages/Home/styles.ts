@@ -2,12 +2,19 @@ import styled from "styled-components";
 
 export const HomeContainer = styled.div`
   display: flex;
+  flex-direction: column;
+
+  padding-bottom: 4rem;
+`;
+
+export const HeaderContainer = styled.div`
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 3.5rem;
   padding: 2rem 0;
-  `;
+`;
 
 export const HomeHeader = styled.header`
   display: flex;
@@ -70,10 +77,17 @@ export const Icon = styled.span<IconProps>`
   font-size: 2rem;
 `;
 
-export const HomeMain = styled.main`
+export const HomeMain = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  gap: 2.5rem;
+
+  h2 {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 130%;
+    color: ${props => props.theme['subtitle']};
+    padding: 0.75rem 0;
+  }
 `;
